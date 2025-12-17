@@ -66,5 +66,22 @@ ACCOUNTS_LIST 配置示例 (支持换行):
 点击 “保存”，完成！
 现在，你可以访问你的 Worker 的 .workers.dev 域名来查看你的监控面板了。如果配置了 Telegram，当隧道状态异常时，你将会收到报警消息。
 
-许可证
-MIT License
+## 加强版-自动触发工作流
+### 特别说明
+进入仓库 -> Settings (设置)。
+
+左侧边栏找到 Actions -> General。
+
+在 Actions permissions 下，确保选择了 "Allow all actions and reusable workflows"。
+
+向下滚动到 Workflow permissions，确保勾选了 "Read and write permissions"。
+
+注意：这一步对你的代码里的 Auto commit 步骤至关重要，否则到时候运行了也会报错说无法提交代码。
+
+点击 Save。
+
+### 特别说明
+Token (PAT) 权限
+
+Worker 用的 API Token 必须在生成时勾选 workflow 权限。如果没有这个权限，GitHub 会拒绝触发请求（为了安全，它会报 404 而不是 403）
+
