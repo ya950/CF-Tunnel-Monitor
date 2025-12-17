@@ -1,7 +1,7 @@
-Cloudflare Tunnel Monitor
+## Cloudflare Tunnel Monitor
 一个功能强大、界面现代的 Cloudflare Tunnel 监控工具。支持多账号管理、美观的卡片式看板、Telegram 报警，以及高性能的并行检查。
 
-功能特性
+## 功能特性
 🚀 高性能并行检查：同时检查所有账号，大幅缩短响应时间。
 🎨 现代化卡片看板：告别传统表格，使用直观的卡片式布局，一目了然。
 🔍 强大的筛选与排序：支持按账号、状态筛选，按名称、账号排序，以及关键词搜索。
@@ -13,21 +13,20 @@ Cloudflare Tunnel Monitor
 Dashboard Preview
 (此处可替换为你自己的截图或演示链接)
 
-部署教程
+## 部署教程
 本教程将指导你如何在 5 分钟内将 Cloudflare Tunnel Monitor 部署到 Cloudflare Workers。
 
-第 1 步：准备 Cloudflare API 令牌
-登录 Cloudflare Dashboard。
-进入 “我的个人资料” -> “API 令牌” 页面。
-点击 “创建令牌”，然后选择 “自定义令牌”。
-给令牌起一个名字，例如 TunnelMonitor。
-在 “权限” 部分，添加以下权限：
+### 第 1 步：准备 Cloudflare API 令牌登录 Cloudflare Dashboard。
+
+进入 “我的个人资料” -> “API 令牌” 页面。点击 “创建令牌”，然后选择 “自定义令牌”。给令牌起一个名字，例如 TunnelMonitor。在 “权限” 部分，添加以下权限：
+
 Account / Cloudflare Tunnel:Read
 Zone / Zone:Read (可选，某些隧道可能需要)
-在 “账户资源” 部分，选择 “所有账户” (如果你的隧道分布在多个账户中) 或指定特定账户。
-点击 “继续以显示摘要”，然后 “创建令牌”。
+
+在 “账户资源” 部分，选择 “所有账户” (如果你的隧道分布在多个账户中) 或指定特定账户。点击 “继续以显示摘要”，然后 “创建令牌”。
+
 重要：立即复制生成的令牌，因为它只会显示一次。
-第 2 步：准备 Telegram Bot (可选，用于报警)
+### 第 2 步：准备 Telegram Bot (可选，用于报警)
 如果你需要 Telegram 报警功能，请完成此步骤。
 
 在 Telegram 中搜索 @BotFather，并开始对话。
